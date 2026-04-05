@@ -14,7 +14,13 @@ $result = $konek->query($sql);
 //tampil hasil
 echo "<b><font color=blue>TABEL MAHASISWA</font></b><br>";
 if ($result->num_rows > 0) {
-    echo "<table border =1><tr><th>NIM</th><th>NAMA</th><th>PRODI</th><th>ANGKATAN</th><th>Edit/Hapus</th></tr>";
+    echo "<table border =1>
+    <tr><th>NIM</th>
+    <th>NAMA</th>
+    <th>PRODI</th>
+    <th>ANGKATAN</th>
+    <th>Edit/Hapus</th>
+    </tr>";
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>".$row['nim']."</td>
         <td>".$row['nama']."</td>
